@@ -7,10 +7,11 @@ import { tileLayer, latLng, divIcon, marker, polygon, circle, icon } from 'leafl
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	redCircleIcon = icon({
-		iconUrl: '../assets/redcircle.png',
-		className: 'animated zoomIn',
-		iconSize: [50, 50] // size of the icon
+	redCircleIcon = divIcon({
+    html: '<div class="center"><span class="animate zoomIn">Test</span></div>',
+		// iconUrl: '../assets/redcircle.png',
+		// className: 'center',
+		iconSize: [50, 50] // size of the icon 
 	});
 	options = {
 		layers: [
