@@ -1,9 +1,0 @@
-.center {
-    text-align: center;
-}
-.zoomIn {
-    -webkit-animation-name: zoomIn;
-    animation-name: zoomIn;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-}

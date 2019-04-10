@@ -1,1 +1,24 @@
 /* Add application styles & imports to this file! */
+.center {
+    text-align: center;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn; 
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn; 
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut; 
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
