@@ -9,11 +9,11 @@ import { tileLayer, latLng, divIcon, marker, polygon, circle, icon } from 'leafl
 export class AppComponent {
 	redCircleIcon = divIcon({
 		className: 'center',
-		html: '<div class="animate zoomIn fadeIn fadeOut"><img src="../assets/redcircle.png" height="50" width="50"></div>',
+		html: '<div class="animate zoomIn fadeIn fadeOut"><img src="assets/redcircle.png" height="50" width="50"></div>',
 	});
 	options = {
 		layers: [
-			tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+			tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
 		],
 		zoom: 5,
 		center: latLng(46.879966, -121.726909)
