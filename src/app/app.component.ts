@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { tileLayer, latLng, divIcon, marker, polygon, circle, icon } from 'leaflet';
-// var json = require('../assets/meetups.json');
+var json = require('../assets/meetups.json');
 
 @Component({
 	selector: 'my-app',
@@ -14,19 +14,17 @@ export class AppComponent {
 	});
 	options = {
 		layers: [
-			tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+			tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
 		],
 		zoom: 5,
 		center: latLng(46.879966, -121.726909)
 	};
-  layers = [
-		marker([46.879966, -121.726909], { icon: this.redCircleIcon })
-	];
-  // meetups = json.meetups;
+  layers = [];
+  meetups = json.meetups;
 
-  // constructor() {
-  //   for(let meetup of this.meetups){
-  //     this.layers.push(marker([meetup.lat, meetup.lon], { icon: this.redCircleIcon }));
-  //   }
-  // }
+  constructor() {
+    for(let meetup of this.meetups){
+      this.layers.push(marker([meetup.lat, meetup.lon], { icon: this.redCircleIcon }));
+    }
+  }
 }
