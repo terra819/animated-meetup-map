@@ -1,26 +1,26 @@
 {
-  "metups": [
+  "meetups": [
     {
-      "lat": 39.902599,
-      "lon": -83.997257,
+      "lat": 46.9,
+      "lon": -121.7,
       "date": "4/4/2019",
       "title": "test meetup1"
     },
     {
-      "lat": 39.913107,
-      "lon": -84.032652,
+      "lat": 46.7,
+      "lon": -121.5,
       "date": "4/09/2019",
       "title": "test meetup2"
     },
     {
-      "lat": 39.826679,
-      "lon": -84.013431,
+      "lat": 46.3,
+      "lon": -121.1,
       "date": "4/15/2019",
       "title": "test meetup3"
     },
     {
-      "lat": 39.833006,
-      "lon": -83.961260,
+      "lat": 46.1,
+      "lon": -121.9,
       "date": "4/20/2019",
       "title": "test meetup4"
     }
