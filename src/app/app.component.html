@@ -4,3 +4,9 @@
      [leafletOptions]="options"
      [leafletLayers]="layers">
 </div>
+<button *ngIf="!playing" (mousedown)="play()">Play</button>
+<button *ngIf="playing" (mousedown)="stop()">Stop</button>
+
+<div *ngIf="playing">
+Checking date: {{playerDate}}
+</div>
