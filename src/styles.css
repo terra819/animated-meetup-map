@@ -5,33 +5,24 @@
     margin-top: -20px;
 }
 .plot {
-    -webkit-animation-name: zoomIn, fadeIn;
-    animation-name: zoomIn, fadeIn; 
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-}
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn; 
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-}
-.fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut; 
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.elementToFadeInAndOut {
     -webkit-animation: fadeinout 2s linear 1 forwards;
     animation: fadeinout 2s linear 1 forwards;
 }
 
 @-webkit-keyframes fadeinout {
-  0% { opacity: 0; height:25%; width:25%; }
-  50% { opacity: 1; height:50%; width:50%;  }
-  100% { opacity: 0;  height:100%; width:100%; }
+  0% { opacity: 0;  }
+  50% { opacity: 1;  }
+  100% { opacity: 0;   }
+
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.2, 0.2, 0.2);
+    transform: scale3d(0.2, 0.2, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeinout {

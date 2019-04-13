@@ -10,7 +10,7 @@ var json = require('../assets/meetups.json');
 export class AppComponent {
   redCircleIcon = divIcon({
     className: 'center',
-    html: '<div class="elementToFadeInAndOut"><img src="https://cdn.jsdelivr.net/gh/terra819/animated-meetup-map@master/src/assets/redcircle.png" height="50" width="50"></div>',
+    html: '<div class="plot"><img src="https://cdn.jsdelivr.net/gh/terra819/animated-meetup-map@master/src/assets/redcircle.png" height="50" width="50"></div>',
   });
   options = {
     layers: [
@@ -30,17 +30,17 @@ export class AppComponent {
   play() {
     this.playing = true;
     const _this = this;
-    this.interval = setInterval(function () { _this.plot(); }, 500);
+    this.interval = setInterval(function () { _this.plot(); }, 250);
   }
 
   stop() {
     this.playing = false;
+    this.layers = [];
     clearInterval(this.interval);
     this.playerDate = new Date('4/3/2019');
   }
 
   plot() {
-    // this.layers = [];
     for (let meetup of this.meetups) {
       const date1 = new Date(meetup.date);
       if (date1.getTime() === this.playerDate.getTime()) {
